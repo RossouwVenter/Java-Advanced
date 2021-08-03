@@ -10,17 +10,17 @@
  */
 public class CarExtras {
 
-    private boolean carbonpack;
-    private int wheelsize;
-    private boolean driveAssist;
-    private String Makepackage;
-
-    public CarExtras(boolean carbonpack, int wheelsize, boolean driveAssist, String Makepackage) {
-        this.carbonpack = carbonpack;
-        this.wheelsize = wheelsize;
-        this.driveAssist = driveAssist;
-        this.Makepackage = Makepackage;
-    }
+//    private boolean carbonpack;
+//    private int wheelsize;
+//    private boolean driveAssist;
+//    private String Makepackage;
+//
+//    public CarExtras(boolean carbonpack, int wheelsize, boolean driveAssist, String Makepackage) {
+//        this.carbonpack = carbonpack;
+//        this.wheelsize = wheelsize;
+//        this.driveAssist = driveAssist;
+//        this.Makepackage = Makepackage;
+//    }
     
     
 

@@ -9,13 +9,13 @@
  * @author rosso
  */
 public class Dealership extends CarExtras{
-    public static void main(String[] args) {
-        Polo polo = new Polo(true,24,true,"sport",2020,"White",200000,20000);
-        
-        System.out.println(polo.getColour());  
-              
-               
-    }
+//    public static void main(String[] args) {
+//        Polo polo = new Polo(true,24,true,"sport",2020,"White",200000,20000);
+//        
+//        System.out.println(polo.getColour());  
+//              
+//               
+//    }
     
     
          
