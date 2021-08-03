@@ -9,31 +9,31 @@ package employee;
  *
  * @author rosso
  */
-public class Manager extends Employee{
-    private String deptName;
+public class Engineer extends Employee{
+    private String technicalField;
 
-    public String getDeptName() {
-        return deptName;
+    public String getTechnicalField() {
+        return technicalField;
     }
 
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
+    public void setTechField(String techField) {
+        this.technicalField = techField;
     }
 
-    public Manager(int empId, String name, String ssn, double salary, String dept) {
+    public Engineer(int empId, String name, String ssn, double salary, String techField) {
       super(empId, name, ssn, salary);
-      deptName = dept;
+      technicalField = techField;
     }
 
     @Override
     public String getDetails() {
       return super.getDetails () + 
-        " Dept: " + deptName;
+        " Field: " + technicalField;
     }
 
     @Override
     public String getAllDetails() {
       return super.getDetails () + 
-        " Dept: " + deptName;
+        " Field: " + technicalField;
     }
 }
