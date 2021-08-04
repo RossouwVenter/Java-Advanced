@@ -9,8 +9,8 @@ package Lesson7Generics;
  *
  * @author rosso
  */
-public class CacheAny <T>{
-      
+public class ChacheAny <T>{
+
     private T t;
   
     public void add(T t){

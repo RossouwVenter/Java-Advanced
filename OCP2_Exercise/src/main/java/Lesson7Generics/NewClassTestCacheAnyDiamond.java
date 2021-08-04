@@ -12,8 +12,8 @@ package Lesson7Generics;
 public class NewClassTestCacheAnyDiamond {
     public static void main(String args[]){
         //Generics
-        CacheAny<String> myGenericMessage = new CacheAny<>(); 
-        CacheAny<Shirt> myGenericShirt = new CacheAny<>(); 
+        ChacheAny<String> myGenericMessage = new ChacheAny<>(); 
+        ChacheAny<Shirt> myGenericShirt = new ChacheAny<>(); 
  
         // Add data and print
         myGenericMessage.add("Save this for me"); // Generic            

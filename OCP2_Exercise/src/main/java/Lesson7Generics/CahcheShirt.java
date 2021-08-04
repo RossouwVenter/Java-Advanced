@@ -9,11 +9,11 @@ package Lesson7Generics;
  *
  * @author rosso
  */
-public class CacheShirt {
+public class CahcheShirt {
     private Shirt shirt;
   
     public void add(Shirt shirt){
-        this.shirt = shirt;
+       this.shirt = shirt;
     }
   
     public Shirt get(){

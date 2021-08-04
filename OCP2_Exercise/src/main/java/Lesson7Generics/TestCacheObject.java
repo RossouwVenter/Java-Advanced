@@ -12,7 +12,7 @@ package Lesson7Generics;
 public class TestCacheObject {
     public static void main(String args[]){
         CacheString myMessage = new CacheString(); // Type specific
-        CacheShirt myShirt = new CacheShirt();     // Type specific
+        CahcheShirt myShirt = new CahcheShirt();     // Type specific
 
         myMessage.add("Save this for me");
         

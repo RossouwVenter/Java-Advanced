@@ -12,11 +12,11 @@ package Lesson7Generics;
 public class TestCacheAny {
     public static void main(String args[]){
         CacheString myMessage = new CacheString(); // Type
-        CacheShirt myShirt = new CacheShirt();     // Type
+        CahcheShirt myShirt = new CahcheShirt();     // Type
 
         //Generics
-        CacheAny<String> myGenericMessage = new CacheAny<String>(); 
-        CacheAny<Shirt> myGenericShirt = new CacheAny<Shirt>(); 
+        ChacheAny<String> myGenericMessage = new ChacheAny<String>(); 
+        ChacheAny<Shirt> myGenericShirt = new ChacheAny<Shirt>(); 
  
         // Add data and print
         myMessage.add("Save this for me"); // Type
