@@ -10,9 +10,9 @@ import java.util.Date;
 public class SimpleJDBCTest {
 
     public static void main(String[] args) {
-        String url = "jdbc:derby://localhost:1527/EmployeeDB";
-        String username = "tiger";
-        String password = "scott";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
+        String username = "postgres";
+        String password = "Rossouw7";// remember to change
         String query = "SELECT * FROM Employee";
         try (Connection con = DriverManager.getConnection(url, username, password);
             Statement stmt = con.createStatement();
