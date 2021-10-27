@@ -2,53 +2,67 @@ package com.company;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.*;
+import java.util.LinkedHashMap;
 
-public class Main {
+public class Main{
 
-    public static void main(String[] args) throws FileNotFoundException {
+
+    public static void main(String[] args) {
+
         File file = new File("C:\\Users\\rosso\\OneDrive\\Desktop\\Java Advanced\\Work\\SoccerApp\\data.txt");
         Scanner sc = null;
-
-        String[] team1, team2, score1, score2;
-
-
+        String match, team1, team2, score1, score2;
+        int leagueTotal = 0;
+        int position = 0;
+        TreeMap<String, Integer> scoreboard = new TreeMap<>();
+        String[] sides, l1, l2;
         try {
             sc = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
-            while (sc.hasNextLine()) {
-                String match = sc.nextLine();
-                String[] split1 = match.trim().split(",");
+        while (sc.hasNextLine()) {
 
-                String[] teamArray1 = split1[0].trim().split(" ");
-                String[] teamArray2 = split1[1].trim().split(" ");
+//            Map<String, Integer> map = new HashMap<>();
+            leagueTotal = 0;
+            match = sc.nextLine();
+            sides = match.split(",");
+            l1 = sides[0].split(" ");
+            team1 = l1[0];
+            score1 = l1[1];
+            l2 = sides[1].split(" ");
+            team2 = l2[0];
+            score2 = l2[1];
+            int teamScore1 = Integer.parseInt(score1);
+            int teamScore2 = Integer.parseInt(score2);
+            if (teamScore1 > teamScore2) {
 
-                team1 = teamArray1[0].split(" ");
-                team2 = teamArray2[0].split( " ");
+                scoreboard.put(team1, scoreboard.getOrDefault(team1, leagueTotal) + 3);
 
-                score1 = teamArray1[1].split(" ");
-                score2 = teamArray2[1].split(" ");
-                for (String string : team1){
-                    System.out.println("Team1: " + string);
-                }
-                for (String string : team2){
-                    System.out.println("Team2: " + string);
-                }
-                for (String string : score1){
-                    System.out.println("Score1: " + string);
-                }
-                for (String string : score2){
-                    System.out.println("Score2: " + string);
-                }
+            } else if (teamScore1 < teamScore2) {
 
+
+                scoreboard.put(team2, scoreboard.getOrDefault(team2, leagueTotal) + 3);
+            } else {
+
+                scoreboard.put(team1, scoreboard.getOrDefault(team1, leagueTotal) + 1);
+                scoreboard.put(team2, scoreboard.getOrDefault(team2, leagueTotal) + 1);
             }
-        } catch (FileNotFoundException var9) {
-            var9.printStackTrace();
         }
 
-        while (sc.hasNextLine()){
 
-        }
+        LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+
+        scoreboard.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println("Rankings: " + reverseSortedMap);
+
+
 
     }
 }
